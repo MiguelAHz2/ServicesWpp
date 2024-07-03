@@ -1,14 +1,18 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import Main from './Components/Main'
+import Home from './Components/Home'
 
 
 function App() {
 
   return (
     <>
-    <h1 className="text-center text-cyan-500 font-bold">Hello World</h1>
-
+    <BrowserRouter>
+      <Routes>
+        <Route index path='/' element={<Home/>} />
+        <Route  path='/main' element={<Main/>} />
+      </Routes>
+    </BrowserRouter>
     </> 
   )
 }
