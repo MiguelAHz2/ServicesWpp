@@ -1,4 +1,3 @@
-import React from 'react'
 import FormOrder from './FormOrder'
 
  function Main() {

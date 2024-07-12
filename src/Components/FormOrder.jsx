@@ -1,8 +1,7 @@
-import React from 'react'
-import { useNavigate } from 'react-router-dom';
+//import { useNavigate } from 'react-router-dom'; NO se usa
 
 function FormOrder() {
-    const navigate = useNavigate();
+    /*/const navigate = useNavigate();
 
     const handleSubmit = (event) => {
       event.preventDefault();
@@ -11,10 +10,10 @@ function FormOrder() {
   
       // Navega a la siguiente página
       navigate('/confirmation');
-    };
+    };*/
     return (
         <>
-            <form onSubmit={handleSubmit} className="space-y-6 rounded-lg bg-card p-6 shadow-lg">
+            <form className="space-y-6 rounded-lg bg-card p-6 shadow-lg">
                 <div>
                     <label
                         className="peer-disabled:cursor-not-allowed peer-disabled:opacity-70 block text-sm font-medium text-muted-foreground"
