@@ -1,8 +1,10 @@
-import { useState, useMemo, useEffect } from "react"
+
+import { useState, useEffect } from "react"
 
 
 
-function mOrder({ loaderState }) {
+// eslint-disable-next-line react/prop-types
+function FormOrder({ loaderState }) {
     const [nombre, setnombre] = useState('')
     const [telefono, settelefono] = useState(0)
     const [direccion, setDirrecion] = useState('')
@@ -33,7 +35,16 @@ function mOrder({ loaderState }) {
     }, [nombre, telefono, direccion, barrio, Pedido])
 
 
+    /*/const navigate = useNavigate();
 
+    const handleSubmit = (event) => {
+      event.preventDefault();
+      
+      // Aquí puedes realizar cualquier lógica de envío de formulario necesaria
+  
+      // Navega a la siguiente página
+      navigate('/confirmation');
+    };*/
 
     return (
         <>
@@ -163,4 +174,4 @@ function mOrder({ loaderState }) {
     )
 }
 
-export default mOrder
+export default FormOrder

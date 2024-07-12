@@ -2,7 +2,7 @@ import { useState } from 'react'
 import FormOrder from './FormOrder'
 
 
-export default function Main() {
+ function Main() {
 
     const [loader, setLoader] = useState(false)
 
@@ -14,7 +14,7 @@ export default function Main() {
                 <main className="container mx-auto flex flex-1 flex-col items-center justify-center px-4 py-8 sm:px-6 lg:px-8">
                     <div className="w-full max-w-md space-y-6">
                         {loader ? (
-                            <div class=" mx-auto rounded-md h-20 w-20 border-4 border-t-4 border-blue-500 animate-spin"></div>) : (
+                            <div className=" mx-auto rounded-md h-20 w-20 border-4 border-t-4 border-blue-500 animate-spin"></div>) : (
                             <div>
                                 <div className="text-center">
                                     <h1 className="text-3xl font-bold tracking-tight text-foreground">Formulario de pedido</h1>
@@ -29,3 +29,5 @@ export default function Main() {
         </>
     )
 }
+
+export default Main
