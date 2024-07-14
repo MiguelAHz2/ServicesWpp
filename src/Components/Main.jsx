@@ -2,7 +2,8 @@ import { useState } from 'react'
 import FormOrder from './FormOrder'
 
 
- function Main() {
+ // eslint-disable-next-line react/prop-types
+ function Main({setOrderStatus}) {
 
     const [loader, setLoader] = useState(false)
 
@@ -20,7 +21,7 @@ import FormOrder from './FormOrder'
                                     <h1 className="text-3xl font-bold tracking-tight text-foreground">Formulario de pedido</h1>
                                     <p className="mt-2 text-sm text-muted-foreground">Completa los siguientes datos para hacer tu pedido</p>
                                 </div>
-                                <FormOrder loaderState={loaderState} />
+                                <FormOrder loaderState={loaderState} setOrderStatus={setOrderStatus} />
                             </div>
                         )}
                     </div>

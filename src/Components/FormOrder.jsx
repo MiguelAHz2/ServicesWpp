@@ -1,16 +1,16 @@
 
 import { useState, useEffect } from "react"
-
-
+import { useNavigate } from "react-router-dom"
 
 // eslint-disable-next-line react/prop-types
-function FormOrder({ loaderState }) {
+function FormOrder({ loaderState, setOrderStatus }) {
     const [nombre, setnombre] = useState('')
     const [telefono, settelefono] = useState(0)
     const [direccion, setDirrecion] = useState('')
     const [barrio, setBarrio] = useState('')
     const [Pedido, setPedido] = useState('')
     const [button, setButton] = useState(true)
+    const navigate = useNavigate();
 
     const handleSumbit = (e) => {
         e.preventDefault();
@@ -19,7 +19,11 @@ function FormOrder({ loaderState }) {
         }
         loaderState(true)
 
-
+    setTimeout(() => {
+        const orderSucessful = false
+        setOrderStatus(orderSucessful)
+        navigate('/confirmation')
+    }, 2000)
     }
 
     useEffect(() => {
@@ -33,18 +37,6 @@ function FormOrder({ loaderState }) {
         }
 
     }, [nombre, telefono, direccion, barrio, Pedido])
-
-
-    /*/const navigate = useNavigate();
-
-    const handleSubmit = (event) => {
-      event.preventDefault();
-      
-      // Aquí puedes realizar cualquier lógica de envío de formulario necesaria
-  
-      // Navega a la siguiente página
-      navigate('/confirmation');
-    };*/
 
     return (
         <>
