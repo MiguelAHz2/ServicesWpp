@@ -5,6 +5,8 @@ import { useState, useEffect } from "react"
 
 // eslint-disable-next-line react/prop-types
 function FormOrder({ loaderState }) {
+
+    //Estados
     const [nombre, setnombre] = useState('')
     const [telefono, settelefono] = useState(0)
     const [direccion, setDirrecion] = useState('')
@@ -12,39 +14,68 @@ function FormOrder({ loaderState }) {
     const [Pedido, setPedido] = useState('')
     const [button, setButton] = useState(true)
 
-    const handleSumbit = (e) => {
+    const handleSumbit = async (e) => {
         e.preventDefault();
-        if (nombre === "" || telefono <= 0 || direccion === "" || barrio === "" || Pedido === "")  {
+
+        //Validacion del formulario
+        if (nombre === "" || telefono <= 0 || direccion === "" || barrio === "" || Pedido === "") {
             return
         }
+
         loaderState(true)
 
+        const horaLocal = new Date()
 
+
+        //Creacion del mensaje 
+        const mensajeSend = `Pedido Realizado *${horaLocal.toLocaleDateString()}* *${horaLocal.toLocaleTimeString()}*:
+        %0A
+        %0ANombre: *${nombre}*
+        %0ATeléfono: ${telefono}
+        %0ADirección: *${direccion}*
+        %0ABarrio: *${barrio}*
+        %0ADetalles del pedido: %0A %09${Pedido}
+        %0A
+        %0A
+        %0A*Realizar confirmacion al cliente del pedido enviado!*
+        `;
+
+        //Parametros del api 
+        const numberPhone = import.meta.env.VITE_NUMBER_PHONE
+        const apiKey = import.meta.env.VITE_API_KEY
+        const url = `https://api.callmebot.com/whatsapp.php?phone=+${numberPhone}&text=${mensajeSend}&apikey=${apiKey}`
+
+        try {
+
+            //Solucion temporal
+            const response = await fetch(url, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                mode: 'no-cors'
+            });
+            console.log(response)
+
+        } catch (error) {
+            console.error('Error in fetch:', error);
+        }
+
+        loaderState(false)
     }
 
+    //Habilitacion del formulario
     useEffect(() => {
 
         if (nombre === "" || telefono <= 0 || direccion === "" || barrio === "" || Pedido === "") {
             setButton(true)
         } else {
             setButton(false)
-
-
         }
 
     }, [nombre, telefono, direccion, barrio, Pedido])
 
 
-    /*/const navigate = useNavigate();
-
-    const handleSubmit = (event) => {
-      event.preventDefault();
-      
-      // Aquí puedes realizar cualquier lógica de envío de formulario necesaria
-  
-      // Navega a la siguiente página
-      navigate('/confirmation');
-    };*/
 
     return (
         <>
