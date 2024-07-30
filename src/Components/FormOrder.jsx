@@ -20,7 +20,7 @@ function FormOrder({ loaderState, setOrderStatus }) {
         loaderState(true)
 
     setTimeout(() => {
-        const orderSucessful = false
+        const orderSucessful = true
         setOrderStatus(orderSucessful)
         navigate('/confirmation')
     }, 2000)

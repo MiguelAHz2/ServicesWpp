@@ -6,7 +6,7 @@ import Confirmation from './Components/Confirmation'
 
 
 function App() {
-  const [orderStatus, setOrderStatus] = useState(null)
+  const [orderStatus, setOrderStatus] = useState(false)
   return (
     <>
     <BrowserRouter>

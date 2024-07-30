@@ -5,9 +5,7 @@ function Confirmation({ orderStatus }) {
   const navigate = useNavigate()
   return (
     <>
-      {orderStatus === null ? (
-        <p>Procesando...</p>
-      ) : orderStatus ? (
+      { orderStatus ? (
         <div className="flex items-center justify-center min-h-screen bg-gray-100">
           <div className="text-center">
             <img src="/public/ok-svgrepo-com.svg" alt="Confirmacion" className="mx-auto mb-2 size-96" />
