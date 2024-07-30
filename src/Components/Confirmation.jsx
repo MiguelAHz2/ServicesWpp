@@ -7,6 +7,7 @@ function Confirmation({ orderStatus }) {
   setTimeout(() => {
     navigate('/')
   }, 2000);
+  
   return (
     <>
       {orderStatus ? (
