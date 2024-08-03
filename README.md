@@ -35,7 +35,7 @@ Este proyecto está diseñado para gestionar pedidos generales vinculados a un m
 * Tailwind.css 🎨
 * (Api) callMeBot
 
-# Preview 📷
+## Preview 📷
 <div style="display: flex; width: 350px; gap: 1rem; margin-bottom: 30px;" >
  <img src="./public/Caps/pantallaInicio.png" alt="PantallaInicio" /> 
 
@@ -47,6 +47,6 @@ Este proyecto está diseñado para gestionar pedidos generales vinculados a un m
 </div>
 
 
-#  Autores 👤
+##  Autores 👤
 * **Miguel Alvarez** - *Desarrollador* - [😎 Perfil GitHub](https://github.com/MiguelAHz2)
 * **Johan Melo** - *Desarrollador* - [😎 Perfil GitHub](https://github.com/Deiverso-JM)
