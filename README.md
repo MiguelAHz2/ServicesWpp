@@ -1,3 +1,4 @@
+
 # ServicesWpp
 
 Este proyecto está diseñado para gestionar pedidos generales vinculados a un mismo número, con el objetivo de automatizar el proceso de órdenes y brindar una experiencia de usuario agradable. Proporciona una solución simple y precisa para este servicio en la plataforma de WhatsApp.
@@ -33,3 +34,19 @@ Este proyecto está diseñado para gestionar pedidos generales vinculados a un m
 * React + Vite ⚛️
 * Tailwind.css 🎨
 * (Api) callMeBot
+
+# Preview 📷
+<div style="display: flex; width: 350px; gap: 1rem; margin-bottom: 30px;" >
+ <img src="./public/Caps/pantallaInicio.png" alt="PantallaInicio" /> 
+
+ <img src="./public/Caps/Formulario.png" alt="VistaFormulario" /> 
+
+ <img src="./public/Caps/Correcto.png" alt="PedidoCorrecto" /> 
+
+ <img src="./public/Caps/Error.png" alt="ErrorPedido" /> 
+</div>
+
+
+#  Autores 👤
+* **Miguel Alvarez** - *Desarrollador* - [😎 Perfil GitHub](https://github.com/MiguelAHz2)
+* **Johan Melo** - *Desarrollador* - [😎 Perfil GitHub](https://github.com/Deiverso-JM)
