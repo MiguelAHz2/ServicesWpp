@@ -1,8 +1,15 @@
-# React + Vite
+# Preview 📷
+<div style="display: flex; width: 350px; gap: 1rem; margin-bottom: 30px;" >
+ <img src="./public/Caps/pantallaInicio.png" alt="PantallaInicio" /> 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+ <img src="./public/Caps/Formulario.png" alt="VistaFormulario" /> 
 
-Currently, two official plugins are available:
+ <img src="./public/Caps/Correcto.png" alt="PedidoCorrecto" /> 
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+ <img src="./public/Caps/Error.png" alt="ErrorPedido" /> 
+</div>
+
+
+#  Autores 👤
+* **Miguel Alvarez** - *Desarrollador* - [😎 Perfil GitHub](https://github.com/MiguelAHz2)
+* **Johan Melo** - *Desarrollador* - [😎 Perfil GitHub](https://github.com/Deiverso-JM)
