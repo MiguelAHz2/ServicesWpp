@@ -3,6 +3,8 @@
 
 Este proyecto está diseñado para gestionar pedidos generales vinculados a un mismo número, con el objetivo de automatizar el proceso de órdenes y brindar una experiencia de usuario agradable. Proporciona una solución simple y precisa para este servicio en la plataforma de WhatsApp.
 
+El link del proyecto es el siguiente, se realizó el despliegue mediante *Netlify*:
+https://appservices.netlify.app/
 ## Guia para iniciar el proyecto
 
 1. Clonar el respositorio desde la rama Main o Develop
